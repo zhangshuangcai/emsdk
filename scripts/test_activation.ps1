@@ -61,18 +61,6 @@ try {
     if (!$EMSDK_Path) {
         throw "No path is added!"
     }
-    $EMSDK_NODE_Path = $path_split | Where-Object { $_ -like "$repo_root\node*" }
-    if (!$EMSDK_NODE_Path) {
-        throw "$repo_root\\node is not added to path."
-    }
-    $EMSDK_PYTHON_Path = $path_split | Where-Object { $_ -like "$repo_root\python*" }
-    if (!$EMSDK_PYTHON_Path) {
-        throw "$repo_root\\python is not added to path."
-    }
-    $EMSDK_JAVA_Path = $path_split | Where-Object { $_ -like "$repo_root\java*" }
-    if (!$EMSDK_JAVA_Path) {
-        throw "$repo_root\\java is not added to path."
-    }
 
     $EMSDK_UPSTREAM_Path = $path_split | Where-Object { $_ -like "$repo_root\upstream\emscripten*" }
     if (!$EMSDK_UPSTREAM_Path) {
